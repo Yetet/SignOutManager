@@ -1,0 +1,16 @@
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe.config
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\bin\Debug\SignOutManager.pdb
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csprojResolveAssemblyReference.cache
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.baml
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\MainWindow.g.cs
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.g.cs
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\App.g.cs
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.cache
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.lref
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\MainWindow.baml
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.g.resources
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.Properties.Resources.resources
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.GenerateResource.Cache
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe
+C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.pdb
