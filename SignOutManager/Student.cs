@@ -9,7 +9,7 @@ namespace SignOutManager
     /// <summary>
     /// Student class that contains the Student's Name and Reason for signing out.
     /// </summary>
-    class Student
+    public class Student
     {
         public string Name { get; set; } = string.Empty;   // The Student's Name.
         public string Reason { get; set; } = string.Empty; // The Reason why the Student signed out.

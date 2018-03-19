@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace SignOutManager
 {
@@ -21,6 +24,10 @@ namespace SignOutManager
     {
         // A List of Students that are currently signed out.
         private readonly List<Student> _studentList = new List<Student>();
+        // List of Students that have signed out.
+        private List<Student> _studentLog = new List<Student>();
+
+        private const string _xmlPath = "SignOutLog.xml";
 
         /// <summary>
         /// SignOutWindow constructor.
@@ -34,11 +41,24 @@ namespace SignOutManager
         private void ButtonSignOut_Click(object sender, RoutedEventArgs e)
         {
             SignOut();
+            TextBoxName.Clear();
+            this.Focus();
         }
 
         private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
         {
             SignIn();
+            this.Focus();
+        }
+
+        private void MenuItemPrint_Click(object sender, RoutedEventArgs e)
+        {
+            WriteLog(_xmlPath);
+        }
+
+        private void MenuItemClear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearLog(_xmlPath);
         }
 
         /// <summary>
@@ -73,6 +93,7 @@ namespace SignOutManager
             try
             {
                 Student student = (Student)ListBoxOutStudents.SelectedItem;
+                _studentLog.Add(student);
                 _studentList.Remove(student);
                 ListBoxOutStudents.Items.Refresh();
                 Console.WriteLine("Student {0} signed in from {1}.", student.Name, student.Reason);
@@ -84,12 +105,48 @@ namespace SignOutManager
             }
         }
 
-        private void WriteLog()
+        /// <summary>
+        /// Write the items from _studentLog to an XML file to be printed.
+        /// </summary>
+        private void WriteLog(string path)
         {
-            // TODO: Write log of students that left 
+            try
+            {
+                XmlSerializer writer = new XmlSerializer(typeof(List<Student>));
+                FileStream file = File.Create(path);
+                writer.Serialize(file, _studentLog);
+                file.Close();
+
+                Console.WriteLine("Successfully created XML log.");
+                MessageBox.Show("Successfully printed log.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                MessageBox.Show("Could not write Student to XML log. " + e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Remove all of the items from the XML file.
+        /// </summary>
+        private void ClearLog(string path)
+        {
+            try
+            {
+                File.Delete(path);
+
+                Console.WriteLine("Successfully deleted XML log.");
+                MessageBox.Show("Successfully deleted log.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                MessageBox.Show("Could not delete XML log. " + e.Message);
+            }
         }
     }
 }
-// TODO: Create XML file of all Students that signed out
 // TODO: Re-format for smaller screen
 // TODO: (optional) Create a print log method that will print out a log of all the Students to the connected printer.
+// TODO: Request password to use Tools menuItem.
