@@ -14,68 +14,75 @@ using System.Windows.Shapes;
 
 namespace SignOutManager
 {
-  /// <summary>
-  /// Interaction logic for SignOutWindow.xaml
-  /// </summary>
-  public partial class SignOutWindow : Window
-  {
-    // A List of Students that are currently signed out.
-    private readonly List<Student> _studentList = new List<Student>();
-
     /// <summary>
-    /// SignOutWindow constructor.
+    /// Interaction logic for SignOutWindow.xaml
     /// </summary>
-    public SignOutWindow()
+    public partial class SignOutWindow : Window
     {
-      InitializeComponent();
-      ListBoxOutStudents.ItemsSource = _studentList;
-    }
+        // A List of Students that are currently signed out.
+        private readonly List<Student> _studentList = new List<Student>();
 
-    private void ButtonSignOut_Click(object sender, RoutedEventArgs e)
-    {
-      SignOut();
-    }
+        /// <summary>
+        /// SignOutWindow constructor.
+        /// </summary>
+        public SignOutWindow()
+        {
+            InitializeComponent();
+            ListBoxOutStudents.ItemsSource = _studentList;
+        }
 
-    private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
-    {
-      SignIn();
-    }
+        private void ButtonSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            SignOut();
+        }
 
-    /// <summary>
-    /// Create a new Student using the values from TextBoxName and ComboBoxReasons.
-    /// Adds the Student to _studentList and refreshes the ListBox.
-    /// </summary>
-    private void SignOut()
-    {
-      // Check if both Name and Reason have a value
-      if (TextBoxName.Text != string.Empty && ComboBoxReasons.SelectedIndex != -1)
-      {
-        Student student = new Student(TextBoxName.Text, ComboBoxReasons.Text);
-        _studentList.Add(student);
-        ListBoxOutStudents.Items.Refresh();
-        ComboBoxReasons.SelectedIndex = -1;
-        Console.WriteLine("Student {0} signed out for {1}.", student.Name, student.Reason);
-      }
-      else
-      {
-        Console.WriteLine("Input in either Name or Reason cannot be empty.");
-      }
-    }
+        private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            SignIn();
+        }
 
-    /// <summary>
-    /// Signs the Student currently selected in ListBoxOutStudents back in.
-    /// Removes the Student from _studentList and refreshes the Listbox.
-    /// Adds the Student and it's properties to an XML file to be later printed by the teacher
-    /// and sent to the office.
-    /// </summary>
-    private void SignIn()
-    {
-      Student student = (Student)ListBoxOutStudents.SelectedItem;
-      _studentList.Remove(student);
-      ListBoxOutStudents.Items.Refresh();
-      Console.WriteLine("Student {0} signed in from {1}.", student.Name, student.Reason); // TODO: Fix Null reference exception
+        /// <summary>
+        /// Create a new Student using the values from TextBoxName and ComboBoxReasons.
+        /// Adds the Student to _studentList and refreshes the ListBox.
+        /// </summary>
+        private void SignOut()
+        {
+            // Check if both Name and Reason have a value
+            if (TextBoxName.Text != string.Empty && ComboBoxReasons.SelectedIndex != -1)
+            {
+                Student student = new Student(TextBoxName.Text, ComboBoxReasons.Text);
+                _studentList.Add(student);
+                ListBoxOutStudents.Items.Refresh();
+                ComboBoxReasons.SelectedIndex = -1;
+                Console.WriteLine("Student {0} signed out for {1}.", student.Name, student.Reason);
+            }
+            else
+            {
+                Console.WriteLine("Input in either Name or Reason cannot be empty.");
+            }
+        }
+
+        /// <summary>
+        /// Signs the Student currently selected in ListBoxOutStudents back in.
+        /// Removes the Student from _studentList and refreshes the Listbox.
+        /// Adds the Student and it's properties to an XML file to be later printed by the teacher
+        /// and sent to the office.
+        /// </summary>
+        private void SignIn()
+        {
+            try
+            {
+                Student student = (Student)ListBoxOutStudents.SelectedItem;
+                _studentList.Remove(student);
+                ListBoxOutStudents.Items.Refresh();
+                Console.WriteLine("Student {0} signed in from {1}.", student.Name, student.Reason);
+                MessageBox.Show("Student " + student.Name + " signed in from " + student.Reason);
+            } catch(NullReferenceException nre)
+            {
+                Console.WriteLine(nre.Message);
+            }
+        }
     }
-  }
 }
 
 // TODO: Create popup on SignIn()
