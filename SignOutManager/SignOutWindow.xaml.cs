@@ -76,16 +76,20 @@ namespace SignOutManager
                 _studentList.Remove(student);
                 ListBoxOutStudents.Items.Refresh();
                 Console.WriteLine("Student {0} signed in from {1}.", student.Name, student.Reason);
-                MessageBox.Show("Student " + student.Name + " signed in from " + student.Reason);
-            } catch(NullReferenceException nre)
+                MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
+            }
+            catch (NullReferenceException nre)
             {
                 Console.WriteLine(nre.Message);
             }
         }
+
+        private void WriteLog()
+        {
+            // TODO: Write log of students that left 
+        }
     }
 }
-
-// TODO: Create popup on SignIn()
 // TODO: Create XML file of all Students that signed out
 // TODO: Re-format for smaller screen
 // TODO: (optional) Create a print log method that will print out a log of all the Students to the connected printer.
