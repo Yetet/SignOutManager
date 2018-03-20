@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin.cs" />
     <Compile Include="SignOutWindow.xaml.cs">
       <DependentUpon>SignOutWindow.xaml</DependentUpon>
     </Compile>

@@ -13,6 +13,8 @@ namespace SignOutManager
     {
         public string Name { get; set; } = string.Empty;   // The Student's Name.
         public string Reason { get; set; } = string.Empty; // The Reason why the Student signed out.
+        public DateTime TimeLeft { get; set; } // Time that the Student Signed out.
+        public DateTime TimeReturned { get; set; } // Time that the Student Signed In.
 
         /// <summary>
         /// Default constructor.

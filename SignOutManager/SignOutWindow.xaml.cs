@@ -71,14 +71,16 @@ namespace SignOutManager
             if (TextBoxName.Text != string.Empty && ComboBoxReasons.SelectedIndex != -1)
             {
                 Student student = new Student(TextBoxName.Text, ComboBoxReasons.Text);
+                student.TimeLeft = DateTime.Now;
                 _studentList.Add(student);
-                ListBoxOutStudents.Items.Refresh();
                 ComboBoxReasons.SelectedIndex = -1;
-                Console.WriteLine("Student {0} signed out for {1}.", student.Name, student.Reason);
+                ListBoxOutStudents.Items.Refresh();
+                Console.WriteLine("Student {0} signed out for {1} at {2}.", student.Name, student.Reason, student.TimeLeft);
             }
             else
             {
                 Console.WriteLine("Input in either Name or Reason cannot be empty.");
+                MessageBox.Show("Input in either Name or Reason cannot be empty.");
             }
         }
 
@@ -93,10 +95,11 @@ namespace SignOutManager
             try
             {
                 Student student = (Student)ListBoxOutStudents.SelectedItem;
+                student.TimeReturned = DateTime.Now;
                 _studentLog.Add(student);
                 _studentList.Remove(student);
                 ListBoxOutStudents.Items.Refresh();
-                Console.WriteLine("Student {0} signed in from {1}.", student.Name, student.Reason);
+                Console.WriteLine("Student {0} signed in from {1} at {2}.", student.Name, student.Reason, student.TimeReturned);
                 MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
             }
             catch (NullReferenceException nre)
