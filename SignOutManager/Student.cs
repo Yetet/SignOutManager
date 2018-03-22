@@ -6,37 +6,39 @@ using System.Threading.Tasks;
 
 namespace SignOutManager
 {
-  /// <summary>
-  /// Student class that contains the Student's Name and Reason for signing out.
-  /// </summary>
-  class Student
-  {
-    public string Name { get; set; } = string.Empty;   // The Student's Name.
-    public string Reason { get; set; } = string.Empty; // The Reason why the Student signed out.
-
     /// <summary>
-    /// Default constructor.
+    /// Student class that contains the Student's Name and Reason for signing out.
     /// </summary>
-    public Student() { }
-
-    /// <summary>
-    /// Constructor override.
-    /// </summary>
-    /// <param name="name">This Student's Name property.</param>
-    public Student(string name)
+    public class Student
     {
-      Name = name;
-    }
+        public string Name { get; set; } = string.Empty;   // The Student's Name.
+        public string Reason { get; set; } = string.Empty; // The Reason why the Student signed out.
+        public DateTime TimeLeft { get; set; } // Time that the Student Signed out.
+        public DateTime TimeReturned { get; set; } // Time that the Student Signed In.
 
-    /// <summary>
-    /// Constructor override.
-    /// </summary>
-    /// <param name="name">This Student's Name property.</param>
-    /// <param name="reason">This Student's Reason property.</param>
-    public Student(string name, string reason)
-    {
-      Name = name;
-      Reason = reason;
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        public Student() { }
+
+        /// <summary>
+        /// Constructor override.
+        /// </summary>
+        /// <param name="name">This Student's Name property.</param>
+        public Student(string name)
+        {
+            Name = name;
+        }
+
+        /// <summary>
+        /// Constructor override.
+        /// </summary>
+        /// <param name="name">This Student's Name property.</param>
+        /// <param name="reason">This Student's Reason property.</param>
+        public Student(string name, string reason)
+        {
+            Name = name;
+            Reason = reason;
+        }
     }
-  }
 }
