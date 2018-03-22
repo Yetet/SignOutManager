@@ -15,18 +15,18 @@ using System.Windows.Shapes;
 
 namespace SignOutManager
 {
-  /// <summary>
-  /// Interaction logic for MainWindow.xaml
-  /// This Window shouldn't be used. It's only a placeholder to switch to SignOutWindow.
-  /// </summary>
-  public partial class MainWindow : Window
-  {
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// This Window shouldn't be used. It's only a placeholder to switch to SignOutWindow.
+    /// </summary>
+    public partial class MainWindow : Window
     {
-      InitializeComponent();
-      // Switch to SignOutWindow.
-      new SignOutWindow().Show();
-      this.Close();
+        public MainWindow()
+        {
+            InitializeComponent();
+            // Switch to SignOutWindow.
+            new SignOutWindow().Show();
+            this.Close();
+        }
     }
-  }
 }

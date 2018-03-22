@@ -14,3 +14,19 @@ C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManag
 C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.GenerateResource.Cache
 C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe
 C:\Users\ghook\Documents\Visual Studio 2015\Projects\SignOutManager\SignOutManager\obj\Debug\SignOutManager.pdb
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe.config
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.pdb
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\bin\Debug\SignOutManager.pdb
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csprojResolveAssemblyReference.cache
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.baml
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\MainWindow.g.cs
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.g.cs
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\App.g.cs
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.cache
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.lref
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\MainWindow.baml
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.g.resources
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.Properties.Resources.resources
+C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.GenerateResource.Cache
