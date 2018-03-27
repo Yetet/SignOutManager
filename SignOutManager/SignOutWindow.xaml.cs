@@ -36,19 +36,20 @@ namespace SignOutManager
         {
             InitializeComponent();
             ListBoxOutStudents.ItemsSource = _studentList;
+            TextBoxName.Focus();
         }
 
         private void ButtonSignOut_Click(object sender, RoutedEventArgs e)
         {
             SignOut();
             TextBoxName.Clear();
-            this.Focus();
+            TextBoxName.Focus();
         }
 
         private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
         {
             SignIn();
-            this.Focus();
+            TextBoxName.Focus();
         }
 
         private void MenuItemPrint_Click(object sender, RoutedEventArgs e)
