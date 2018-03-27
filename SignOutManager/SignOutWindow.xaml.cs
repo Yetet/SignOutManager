@@ -27,7 +27,7 @@ namespace SignOutManager
         // List of Students that have signed out.
         private List<Student> _studentLog = new List<Student>();
 
-        private const string _xmlPath = "SignOutLog.xml";
+        private const string _xmlPath =@"\\DESKTOP-E78T4J3\Signout\LOG\SignOutLog.xml";
 
         /// <summary>
         /// SignOutWindow constructor.
@@ -115,8 +115,9 @@ namespace SignOutManager
         {
             try
             {
+                var xmlWriterSettings = new XmlWriterSettings() { Indent = true };
                 XmlSerializer writer = new XmlSerializer(typeof(List<Student>));
-                FileStream file = File.Create(path);
+                FileStream file = File.OpenWrite(_xmlPath);
                 writer.Serialize(file, _studentLog);
                 file.Close();
 
