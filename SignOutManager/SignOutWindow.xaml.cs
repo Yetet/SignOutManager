@@ -22,10 +22,14 @@ namespace SignOutManager
     /// </summary>
     public partial class SignOutWindow : Window
     {
+        #region Variables
+
         private readonly List<Student> _studentList = new List<Student>();
         private List<Student> _studentLog = new List<Student>();
 
         private const string _xmlPath = "SignOutLog.xml";
+
+        #endregion
 
         #region Controls Methods
 
@@ -71,7 +75,6 @@ namespace SignOutManager
         /// </summary>
         private void SignOut()
         {
-            // Check if both Name and Reason have a value
             if (TextBoxName.Text != string.Empty && ComboBoxReasons.SelectedIndex != -1)
             {
                 Student student = new Student(TextBoxName.Text, ComboBoxReasons.Text);
@@ -157,6 +160,3 @@ namespace SignOutManager
         #endregion
     }
 }
-// TODO: Re-format for smaller screen
-// TODO: (optional) Create a print log method that will print out a log of all the Students to the connected printer.
-// TODO: Request password to use Tools menuItem.
