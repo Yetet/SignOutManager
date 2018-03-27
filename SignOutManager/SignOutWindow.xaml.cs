@@ -22,12 +22,12 @@ namespace SignOutManager
     /// </summary>
     public partial class SignOutWindow : Window
     {
-        // A List of Students that are currently signed out.
         private readonly List<Student> _studentList = new List<Student>();
-        // List of Students that have signed out.
         private List<Student> _studentLog = new List<Student>();
 
         private const string _xmlPath = "SignOutLog.xml";
+
+        #region Controls Methods
 
         /// <summary>
         /// SignOutWindow constructor.
@@ -60,6 +60,10 @@ namespace SignOutManager
         {
             ClearLog(_xmlPath);
         }
+
+        #endregion
+
+        #region Behavior Methods
 
         /// <summary>
         /// Create a new Student using the values from TextBoxName and ComboBoxReasons.
@@ -99,6 +103,7 @@ namespace SignOutManager
                 _studentLog.Add(student);
                 _studentList.Remove(student);
                 ListBoxOutStudents.Items.Refresh();
+
                 Console.WriteLine("Student {0} signed in from {1} at {2}.", student.Name, student.Reason, student.TimeReturned);
                 MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
             }
@@ -119,8 +124,6 @@ namespace SignOutManager
                 FileStream file = File.Create(path);
                 writer.Serialize(file, _studentLog);
                 file.Close();
-
-                PrintXML(_xmlPath);
 
                 Console.WriteLine("Successfully created XML log.");
                 MessageBox.Show("Successfully printed log.");
@@ -151,46 +154,7 @@ namespace SignOutManager
             }
         }
 
-        public static String PrintXML(String XML)
-        {
-            String Result = "";
-
-            MemoryStream mStream = new MemoryStream();
-            XmlTextWriter writer = new XmlTextWriter(mStream, Encoding.Unicode);
-            XmlDocument document = new XmlDocument();
-
-            try
-            {
-                // Load the XmlDocument with the XML.
-                document.LoadXml(XML);
-
-                writer.Formatting = Formatting.Indented;
-
-                // Write the XML into a formatting XmlTextWriter
-                document.WriteContentTo(writer);
-                writer.Flush();
-                mStream.Flush();
-
-                // Have to rewind the MemoryStream in order to read
-                // its contents.
-                mStream.Position = 0;
-
-                // Read MemoryStream contents into a StreamReader.
-                StreamReader sReader = new StreamReader(mStream);
-
-                // Extract the text from the StreamReader.
-                String FormattedXML = sReader.ReadToEnd();
-
-                Result = FormattedXML;
-            }
-            catch (XmlException)
-            {
-            }
-
-            mStream.Close();
-
-            return Result;
-        }
+        #endregion
     }
 }
 // TODO: Re-format for smaller screen
