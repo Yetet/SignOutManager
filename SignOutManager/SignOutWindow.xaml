@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light">
+        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
@@ -14,11 +14,11 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="TextBlockSignOut" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign Out" FontSize="24" TextAlignment="Center"/>
-        <TextBlock x:Name="TextBlockSignIn" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign In" FontSize="24" TextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
-        <TextBlock x:Name="TextBlockName" Margin="10,10,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="60" FontSize="18" TextAlignment="Center"/>
-        <TextBox x:Name="TextBoxName" Height="23" Margin="75,12,10,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Enter your name here."/>
-        <ComboBox x:Name="ComboBoxReasons" Margin="75,44,10,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" ToolTip="Select your reason for signing out." Height="21">
+        <TextBlock x:Name="TextBlockSignOut" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign Out" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="TextBlockSignIn" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign In" FontSize="20" TextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+        <TextBlock x:Name="TextBlockName" Margin="10,10,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="60" FontSize="20" TextAlignment="Center"/>
+        <TextBox x:Name="TextBoxName" Height="35" Margin="96,10,9.8,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Enter your name here." FontSize="20"/>
+        <ComboBox x:Name="ComboBoxReasons" Margin="96,66,9.8,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" ToolTip="Select your reason for signing out." Height="35" FontSize="20">
             <ComboBoxItem Content="Bathroom"/>
             <ComboBoxItem Content="Water"/>
             <ComboBoxItem Content="Office"/>
@@ -28,12 +28,12 @@
             <ComboBoxItem Content="Locker"/>
             <ComboBoxItem Content="Other"/>
         </ComboBox>
-        <TextBlock x:Name="TextBlockReason" Margin="10,40,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Reason: " VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="65" FontSize="18" TextAlignment="Center"/>
-        <Button x:Name="ButtonSignOut" Content="Sign Out" Margin="10,0,10,10" Grid.Row="1" Grid.Column="0" ToolTip="" Click="ButtonSignOut_Click" Height="36" VerticalAlignment="Bottom"/>
-        <ListBox x:Name="ListBoxOutStudents" Margin="10,10,10,65" Grid.Row="1" Grid.Column="1" DisplayMemberPath="Name"/>
-        <Button x:Name="ButtonSignIn" Content="Sign In" Margin="10,0,10,10" Grid.Row="1" Grid.Column="1" ToolTip="" Click="ButtonSignIn_Click" Height="36" VerticalAlignment="Bottom"/>
-        <Menu x:Name="MenuMain" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="594" Grid.ColumnSpan="2">
-            <MenuItem x:Name="MenuItemTools"  Header="Tools">
+        <TextBlock x:Name="TextBlockReason" Margin="5,62,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Reason: " VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="81" FontSize="20" TextAlignment="Center"/>
+        <Button x:Name="ButtonSignOut" Content="Sign Out" Margin="10,0,9.8,10.4" Grid.Row="1" Grid.Column="0" ToolTip="" Click="ButtonSignOut_Click" Height="72" VerticalAlignment="Bottom" FontSize="20"/>
+        <ListBox x:Name="ListBoxOutStudents" Margin="10.2,10,9.6,87.4" Grid.Row="1" Grid.Column="1" DisplayMemberPath="Name" FontSize="20"/>
+        <Button x:Name="ButtonSignIn" Content="Sign In" Margin="10.2,0,9.6,10.4" Grid.Row="1" Grid.Column="1" ToolTip="" Click="ButtonSignIn_Click" Height="72" VerticalAlignment="Bottom" FontSize="20"/>
+        <Menu x:Name="MenuMain" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="594" Grid.ColumnSpan="2" FontSize="20">
+            <MenuItem x:Name="MenuItemTools"  Header="Tools" FontSize="16">
                 <MenuItem x:Name="MenuItemPrint" Header="Print Log" Click="MenuItemPrint_Click"/>
                 <MenuItem x:Name="MenuItemClear" Header="Clear Log" Click="MenuItemClear_Click"/>
             </MenuItem>
