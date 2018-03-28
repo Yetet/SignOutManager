@@ -36,6 +36,7 @@ namespace SignOutManager
         {
             InitializeComponent();
             ListBoxOutStudents.ItemsSource = _studentList;
+            TextBlockSignOut.Focus();
         }
 
         private void ButtonSignOut_Click(object sender, RoutedEventArgs e)
@@ -43,6 +44,7 @@ namespace SignOutManager
             SignOut();
             TextBoxName.Clear();
             this.Focus();
+            TextBlockSignOut.Focus();
         }
 
         private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
@@ -50,6 +52,7 @@ namespace SignOutManager
             SignIn();
             WriteLog(_xmlPath);
             this.Focus();
+            TextBlockSignOut.Focus();
         }
 
         private void MenuItemPrint_Click(object sender, RoutedEventArgs e)
@@ -122,6 +125,8 @@ namespace SignOutManager
                 FileStream file = File.OpenWrite(@"\\DESKTOP-E78T4J3\Signout\LOG\SignOutLog.xml");
                 writer.Serialize(file, _studentLog);
                 file.Close();
+
+               
 
                 Console.WriteLine("Successfully created XML log.");
 

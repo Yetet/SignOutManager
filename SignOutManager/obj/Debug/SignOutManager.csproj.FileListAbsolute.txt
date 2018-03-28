@@ -47,3 +47,8 @@ D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutMan
 D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.CoreCompileInputs.cache
 D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe
 D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.pdb
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe.manifest
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\bin\Debug\SignOutManager.application
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe.manifest
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.application
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.TrustInfo.xml
