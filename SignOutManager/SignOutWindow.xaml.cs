@@ -123,7 +123,7 @@ namespace SignOutManager
                 file.Close();
 
                 Console.WriteLine("Successfully created XML log.");
-                MessageBox.Show("Successfully printed log.");
+                
             }
             catch (Exception e)
             {
