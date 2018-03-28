@@ -48,12 +48,14 @@ namespace SignOutManager
         private void ButtonSignIn_Click(object sender, RoutedEventArgs e)
         {
             SignIn();
+            WriteLog(_xmlPath);
             this.Focus();
         }
 
         private void MenuItemPrint_Click(object sender, RoutedEventArgs e)
         {
-            WriteLog(_xmlPath);
+            //Tyler Commented This Out TO Test Having The Log Write When A Student Signs In
+            //WriteLog(_xmlPath);
         }
 
         private void MenuItemClear_Click(object sender, RoutedEventArgs e)
