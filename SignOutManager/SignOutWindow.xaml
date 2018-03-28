@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light">
+        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
