@@ -124,8 +124,8 @@ namespace SignOutManager
                 file.Close();
 
                 Console.WriteLine("Successfully created XML log.");
-                
-            }
+
+                            }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
