@@ -117,6 +117,7 @@ namespace SignOutManager
         {
             try
             {
+                var xmlWriterSettings = new XmlWriterSettings() { Indent = true };
                 XmlSerializer writer = new XmlSerializer(typeof(List<Student>));
                 FileStream file = File.OpenWrite(@"\\DESKTOP-E78T4J3\Signout\LOG\SignOutLog.xml");
                 writer.Serialize(file, _studentLog);
