@@ -117,13 +117,17 @@ namespace SignOutManager
         {
             try
             {
+                var xmlWriterSettings = new XmlWriterSettings() { Indent = true };
                 XmlSerializer writer = new XmlSerializer(typeof(List<Student>));
-                FileStream file = File.OpenWrite(@"\\DESKTOP-E78T4J3\Signout\LOG\SignOutLog.xml");
+                FileStream file = File.OpenWrite(_xmlPath);
                 writer.Serialize(file, _studentLog);
                 file.Close();
 
                 Console.WriteLine("Successfully created XML log.");
-                MessageBox.Show("Successfully printed log.");
+                
+                
+                //Delete Message Box?
+                //MessageBox.Show("Successfully printed log.");
             }
             catch (Exception e)
             {
