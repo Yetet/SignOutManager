@@ -30,3 +30,20 @@ C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\M
 C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.g.resources
 C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.Properties.Resources.resources
 C:\Gabriel Hooks\Visual Studio 2015\C#\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.GenerateResource.Cache
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe.config
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\bin\Debug\SignOutManager.exe
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\bin\Debug\SignOutManager.pdb
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csprojResolveAssemblyReference.cache
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.baml
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\MainWindow.g.cs
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutWindow.g.cs
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\App.g.cs
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.cache
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager_MarkupCompile.lref
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\MainWindow.baml
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.g.resources
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.Properties.Resources.resources
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.GenerateResource.cache
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.csproj.CoreCompileInputs.cache
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.exe
+D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\SignOutManager.pdb
