@@ -36,6 +36,9 @@
             <MenuItem x:Name="MenuItemTools"  Header="Tools">
                 <MenuItem x:Name="MenuItemPrint" Header="Print Log" Click="MenuItemPrint_Click"/>
                 <MenuItem x:Name="MenuItemClear" Header="Clear Log" Click="MenuItemClear_Click"/>
+                <MenuItem x:Name="MenuItemSettings" Header="Settings">
+                    <MenuItem x:Name="MenuItemSelectSaveLocation" Header="Select Save Location" Click="MenuItemSelectSaveLocation_Click"/>
+                </MenuItem>
             </MenuItem>
         </Menu>
     </Grid>

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Windows.Forms;
 
 namespace SignOutManager
 {
@@ -65,6 +66,14 @@ namespace SignOutManager
             ClearLog(_xmlPath);
         }
 
+        private void MenuItemSelectSaveLocation_Click(object sender, RoutedEventArgs e)
+        {
+            using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+            {
+                System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+            }
+        }
+
         #endregion
 
         #region Behavior Methods
@@ -87,7 +96,7 @@ namespace SignOutManager
             else
             {
                 Console.WriteLine("Input in either Name or Reason cannot be empty.");
-                MessageBox.Show("Input in either Name or Reason cannot be empty.");
+                System.Windows.MessageBox.Show("Input in either Name or Reason cannot be empty.");
             }
         }
 
@@ -108,7 +117,7 @@ namespace SignOutManager
                 ListBoxOutStudents.Items.Refresh();
 
                 Console.WriteLine("Student {0} signed in from {1} at {2}.", student.Name, student.Reason, student.TimeReturned);
-                MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
+                System.Windows.MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
             }
             catch (NullReferenceException nre)
             {
@@ -129,12 +138,12 @@ namespace SignOutManager
                 file.Close();
 
                 Console.WriteLine("Successfully created XML log.");
-                MessageBox.Show("Successfully printed log.");
+                System.Windows.MessageBox.Show("Successfully printed log.");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                MessageBox.Show("Could not write Student to XML log. " + e.Message);
+                System.Windows.MessageBox.Show("Could not write Student to XML log. " + e.Message);
             }
         }
 
@@ -148,12 +157,12 @@ namespace SignOutManager
                 File.Delete(path);
 
                 Console.WriteLine("Successfully deleted XML log.");
-                MessageBox.Show("Successfully deleted log.");
+                System.Windows.Forms.MessageBox.Show("Successfully deleted log.");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                MessageBox.Show("Could not delete XML log. " + e.Message);
+                System.Windows.MessageBox.Show("Could not delete XML log. " + e.Message);
             }
         }
 
