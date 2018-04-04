@@ -28,7 +28,7 @@ namespace SignOutManager
         private readonly List<Student> _studentList = new List<Student>();
         private List<Student> _studentLog = new List<Student>();
 
-        private const string _xmlPath = "SignOutLog.xml";
+        private string _xmlPath = "SignOutLog.xml";
 
         #endregion
 
@@ -71,6 +71,7 @@ namespace SignOutManager
             using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
             {
                 System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+                _xmlPath = dialog.SelectedPath;
             }
         }
 
