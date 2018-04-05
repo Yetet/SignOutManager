@@ -111,7 +111,7 @@ namespace SignOutManager
                 Console.WriteLine("Student {0} signed in from {1} at {2}.", student.Name, student.Reason, student.TimeReturned);
                 MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
 
-                string sqlQuery = "INSERT INTO Signout Log (`StudentName`,`Reason`,`Time Out`,`Time In`) values (?,?,?,?)";
+                string sqlQuery = "INSERT INTO Signout_Log (`StudentName`,`Reason`,`Time Out`,`Time In`) values (?,?,?,?)";
                 using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\DESKTOP-E78T4J3\Signout\Database\GSHS_Signout_Logs_2017-2018.accdb"))
                 using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
                 {
