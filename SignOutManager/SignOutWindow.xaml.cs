@@ -118,7 +118,7 @@ namespace SignOutManager
 
 
             string sqlQuery = "INSERT INTO Table1 (`StudentName`,`Reason`) values (?,?)";
-            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Programming\Database Write Test\TylerTestDatabase.accdb"))
+            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\DESKTOP-E78T4J3\Signout\Database\GSHS_Signout_Logs_2017-2018.accdb"))
             using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
             {
 
