@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -114,6 +115,19 @@ namespace SignOutManager
             {
                 Console.WriteLine(nre.Message);
             }
+
+
+            string sqlQuery = "INSERT INTO Table1 (`StudentName`,`Reason`) values (?,?)";
+            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Programming\Database Write Test\TylerTestDatabase.accdb"))
+            using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+            {
+
+                conn.Open();
+                cmd.Parameters.AddWithValue("@StudentName", this.TextBox.Text);
+                cmd.Parameters.AddWithValue("@Reason", this.TextBox2.Text);
+                cmd.ExecuteNonQuery();
+            }
+
         }
 
         /// <summary>
