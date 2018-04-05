@@ -17,7 +17,7 @@
         <TextBlock x:Name="TextBlockSignOut" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign Out" FontSize="24" TextAlignment="Center"/>
         <TextBlock x:Name="TextBlockSignIn" Margin="10,30,10,10" TextWrapping="Wrap" Text="Sign In" FontSize="24" TextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
         <TextBlock x:Name="TextBlockName" Margin="10,10,0,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="60" FontSize="18" TextAlignment="Center"/>
-        <TextBox x:Name="TextBoxName" Height="23" Margin="75,12,10,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Enter your name here."/>
+        <TextBox x:Name="TextBoxName" Height="23" Margin="75,12,10,0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Enter your name here." TextChanged="TextBoxName_TextChanged"/>
         <ComboBox x:Name="ComboBoxReasons" Margin="75,44,10,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" ToolTip="Select your reason for signing out." Height="21">
             <ComboBoxItem Content="Bathroom"/>
             <ComboBoxItem Content="Water"/>

@@ -110,6 +110,19 @@ namespace SignOutManager
 
                 Console.WriteLine("Student {0} signed in from {1} at {2}.", student.Name, student.Reason, student.TimeReturned);
                 MessageBox.Show(student.Name + " signed in from " + student.Reason + ".");
+
+                string sqlQuery = "INSERT INTO Signout Log (`StudentName`,`Reason`,`Time Out`,`Time In`) values (?,?,?,?)";
+                using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\DESKTOP-E78T4J3\Signout\Database\GSHS_Signout_Logs_2017-2018.accdb"))
+                using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                {
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@StudentName", student.Name);
+                    cmd.Parameters.AddWithValue("@Reason", student.Reason);
+                    cmd.Parameters.AddWithValue("@Time Out", student.TimeLeft);
+                    cmd.Parameters.AddWithValue("@Time In", student.TimeReturned);
+                    cmd.ExecuteNonQuery();
+                }
             }
             catch (NullReferenceException nre)
             {
@@ -117,16 +130,7 @@ namespace SignOutManager
             }
 
 
-            string sqlQuery = "INSERT INTO Table1 (`StudentName`,`Reason`) values (?,?)";
-            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\DESKTOP-E78T4J3\Signout\Database\GSHS_Signout_Logs_2017-2018.accdb"))
-            using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
-            {
-
-                conn.Open();
-                cmd.Parameters.AddWithValue("@StudentName", this.TextBox.Text);
-                cmd.Parameters.AddWithValue("@Reason", this.TextBox2.Text);
-                cmd.ExecuteNonQuery();
-            }
+           
 
         }
 
@@ -172,5 +176,10 @@ namespace SignOutManager
         }
 
         #endregion
+
+        private void TextBoxName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

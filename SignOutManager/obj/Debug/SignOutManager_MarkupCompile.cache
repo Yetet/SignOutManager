@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Programming\SignOutManager\SignOutManager\SignOutManager\obj\Debug\
+C:\Users\Gabe\Documents\GitHub\SignOutManager\SignOutManager\obj\Debug\
 SignOutManager
 none
 false
 DEBUG;TRACE
-D:\Programming\SignOutManager\SignOutManager\SignOutManager\App.xaml
+C:\Users\Gabe\Documents\GitHub\SignOutManager\SignOutManager\App.xaml
 21220146402
 
-111390075971
+7770794928
 13738642453
 MainWindow.xaml;SignOutWindow.xaml;
 
-True
+False
 
