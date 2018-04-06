@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light">
+        Title="Sign Out/Sign In" Height="400" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Microsoft JhengHei UI Light" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
@@ -32,11 +32,5 @@
         <Button x:Name="ButtonSignOut" Content="Sign Out" Margin="10,0,10,10" Grid.Row="1" Grid.Column="0" ToolTip="" Click="ButtonSignOut_Click" Height="36" VerticalAlignment="Bottom"/>
         <ListBox x:Name="ListBoxOutStudents" Margin="10,10,10,65" Grid.Row="1" Grid.Column="1" DisplayMemberPath="Name"/>
         <Button x:Name="ButtonSignIn" Content="Sign In" Margin="10,0,10,10" Grid.Row="1" Grid.Column="1" ToolTip="" Click="ButtonSignIn_Click" Height="36" VerticalAlignment="Bottom"/>
-        <Menu x:Name="MenuMain" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="594" Grid.ColumnSpan="2">
-            <MenuItem x:Name="MenuItemTools"  Header="Tools">
-                <MenuItem x:Name="MenuItemPrint" Header="Print Log" Click="MenuItemPrint_Click"/>
-                <MenuItem x:Name="MenuItemClear" Header="Clear Log" Click="MenuItemClear_Click"/>
-            </MenuItem>
-        </Menu>
     </Grid>
 </Window>
